@@ -2,7 +2,6 @@ import 'dart:io';
 
 void main() {
   print("==== APLIKASI ATM ====");
-
   print("LOGIN");
   login();
 }
@@ -44,11 +43,9 @@ void menuUtama() {
   print("=== MENU UTAMA ====");
   print(""
       ""
-
       ""
       "SER : $nama");
-  print(
-      "1 -> PENARIKAN");
+  print("1 -> PENARIKAN");
   print("2 -> TRANSFER");
   print("3 -> CEK SALDO");
 

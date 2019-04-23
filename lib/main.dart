@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'form_validation.dart';
 
-void main() => runApp(FormValidation());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -9,12 +8,28 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Flutter Demo',
-        home:
-        Scaffold(
-          appBar: AppBar(
-            title: Text('SnackBar Demo'),
+        home: new Scaffold(
+          appBar: new AppBar(
+            title: Text("Flutter layout demo"),
           ),
-
+          body: SingleChildScrollView(
+            child: ConstrainedBox(
+              constraints: BoxConstraints(),
+              child: Column(
+                children: <Widget>[
+                  Image.asset(
+                    'assets/lake.jpeg',
+                    width: 600,
+                    height: 200,
+                    fit: BoxFit.fitHeight,
+                  ),
+                  titleSection,
+                  buttonSection,
+                  textSection
+                ],
+              ),
+            ),
+          ),
         ));
   }
 
@@ -93,10 +108,8 @@ Column _buildButtonColumn(IconData icon, String label) {
           label,
           style: TextStyle(
               fontSize: 12, fontWeight: FontWeight.w400, color: Colors.black),
-
         ),
       )
     ],
   );
 }
-
